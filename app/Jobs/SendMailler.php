@@ -50,7 +50,7 @@ class SendMailler implements ShouldQueue
        
         Mail::send('sendMail', [], function ($message) use ($gmail) {
             $message->to($gmail);
-            $message->subject("Urgent Request for Rescheduling Visa Appointment 2");
+            $message->subject("Urgent Request for Rescheduling Visa Appointment on Medical Grounds 2");
             $message->attach(public_path('Mahbubur-Rahman-Photo.jpg'));
             $message->attach(public_path('Previous-visa-application.pdf'));
             $message->attach(public_path('Medical-reports-records.pdf'));
